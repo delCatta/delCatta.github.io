@@ -1,14 +1,12 @@
-import { Box, Heading, Text, Button ,useColorModeValue,Flex} from '@chakra-ui/react';
-import NextLink from "next/link"
-import { Link } from '@chakra-ui/react'
+import { Box, Heading, Text, Button, useColorModeValue, Flex, Link } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
+import { HomeIcon } from '@chakra-ui/icons'
 
-import { HomeIcon} from '@chakra-ui/icons';
-
-export default function NotFound() {
+export default function NotFound () {
   const teal = useColorModeValue('teal.500', 'teal.200')
   return (
-      <Flex  grow={1} alignItems={'center'} justifyContent={'center'}>
+      <Flex grow={1} alignItems={'center'} justifyContent={'center'}>
         <Box textAlign="center" py={10} px={6}>
               <Heading
                 display="inline-block"
@@ -35,8 +33,8 @@ export default function NotFound() {
                             Back to Home
                           </Button>
               </NextLink>
-              
+
           </Box>
       </Flex>
-  );
+  )
 }

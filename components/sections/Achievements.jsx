@@ -1,25 +1,25 @@
 import {
-    Box,
-    chakra,
-    Divider,
-    Flex,
-    SimpleGrid,
-    Stat,
-    StatLabel,
-    StatNumber,
-    Link,
-    useColorModeValue,
-  } from '@chakra-ui/react';
-  import NextLink from "next/link"
+  Box,
+  chakra,
+  Divider,
+  Flex,
+  SimpleGrid,
+  Stat,
+  StatLabel,
+  StatNumber,
+  Link,
+  useColorModeValue
+} from '@chakra-ui/react'
+import NextLink from 'next/link'
 
-  import { ReactNode } from 'react';
-  import { BsPerson } from 'react-icons/bs';
-  import { FaGamepad } from 'react-icons/fa';
-  import { GoLocation } from 'react-icons/go';
-  
-  function StatsCard(props) {
-    const { title, stat, icon,link } = props;
-    return (
+import { ReactNode } from 'react'
+import { BsPerson } from 'react-icons/bs'
+import { FaGamepad } from 'react-icons/fa'
+import { GoLocation } from 'react-icons/go'
+
+function StatsCard (props) {
+  const { title, stat, icon, link } = props
+  return (
       <Stat
         px={{ base: 2, md: 4 }}
         py={'5'}
@@ -48,12 +48,12 @@ import {
           </Box>
         </Flex>
       </Stat>
-    );
-  }
-  
-  export default function BasicStatistics() {
-    return (
-      <Box maxW="7xl" px={{base:8,"sm":16}} mx={'auto'} >
+  )
+}
+
+export default function BasicStatistics () {
+  return (
+      <Box maxW="7xl" px={{ base: 8, sm: 16 }} mx={'auto'} >
         <Divider/>
         <chakra.h1
           textAlign={'center'}
@@ -66,23 +66,23 @@ import {
             <StatsCard
               title={'1 Year - Gilbert, Arizona. '}
               stat={'AFS Intercultural Exchange.'}
-              link={"https://www.afs.cl/"}
+              link={'https://www.afs.cl/'}
               icon={<GoLocation size={'3em'} />}
             />
           <StatsCard
             title={'GameJam'}
             stat={'8th place at JamCraft.'}
-            link={"https://t4g1.itch.io/crossbow-hero"}
+            link={'https://t4g1.itch.io/crossbow-hero'}
             icon={<FaGamepad size={'3em'} />}
           />
           <StatsCard
             title={'Technovation Chile'}
             stat={'Mentored Girls to build Apps.'}
-            link={"https://technovation.cl/"}
+            link={'https://technovation.cl/'}
             icon={<BsPerson size={'3em'} />}
           />
         </SimpleGrid>
         <Divider/>
       </Box>
-    );
-  }
+  )
+}
