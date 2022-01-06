@@ -8,95 +8,96 @@ import {
   Stack,
   StackDivider,
   Icon,
-  useColorModeValue
-} from '@chakra-ui/react'
+  useColorModeValue,
+} from '@chakra-ui/react';
 import {
   SiFlutter,
   SiNextdotjs,
-  SiRubyonrails
-} from 'react-icons/si'
+  SiRubyonrails,
+} from 'react-icons/si';
 
-import { ReactElement } from 'react'
+import React from 'react';
 
-const Feature = ({ text, icon, iconBg }) => {
+const Feature = ({ text, icon, iconBg }) => (
+  <Stack direction="row" align="center">
+    <Flex
+      w={8}
+      h={8}
+      align="center"
+      justify="center"
+      rounded="full"
+      bg={iconBg}
+    >
+      {icon}
+    </Flex>
+    <Text fontWeight={600}>{text}</Text>
+  </Stack>
+);
+
+export default function SplitWithImage() {
   return (
-      <Stack direction={'row'} align={'center'}>
-        <Flex
-          w={8}
-          h={8}
-          align={'center'}
-          justify={'center'}
-          rounded={'full'}
-          bg={iconBg}>
-          {icon}
-        </Flex>
-        <Text fontWeight={600}>{text}</Text>
-      </Stack>
-  )
-}
-
-export default function SplitWithImage () {
-  return (
-      <Flex w={'full'} direction={'column'} alignItems={'center'} justifyContent={'center'}>
-      <Flex py={12} px={{ base: 8, sm: 16 }} maxW={'7xl'}>
+    <Flex w="full" direction="column" alignItems="center" justifyContent="center">
+      <Flex py={12} px={{ base: 8, sm: 16 }} maxW="7xl">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>
             <Text
-              textTransform={'uppercase'}
+              textTransform="uppercase"
               color={useColorModeValue('white', 'teal.300')}
               fontWeight={600}
-              fontSize={'sm'}
+              fontSize="sm"
               bg={useColorModeValue('teal.300', 'teal.700')}
               p={2}
-              alignSelf={'flex-start'}
-              rounded={'md'}>
+              alignSelf="flex-start"
+              rounded="md"
+            >
               About Me
             </Text>
             <Heading>Hello There!</Heading>
-            <Text color={useColorModeValue('gray.600', 'gray.400')} fontSize={'lg'}>
+            <Text color={useColorModeValue('gray.600', 'gray.400')} fontSize="lg">
               I am passionate for building maintainable solutions for different niches and industries. Some of the frameworks I use are:
             </Text>
             <Stack
               spacing={4}
-              divider={
+              divider={(
                 <StackDivider
                   borderColor={useColorModeValue('gray.100', 'gray.700')}
                 />
-              }>
+              )}
+            >
               <Feature
                 icon={
-                  <Icon as={SiFlutter} color={'blue.500'} w={5} h={5} />
+                  <Icon as={SiFlutter} color="blue.500" w={5} h={5} />
                 }
                 iconBg={useColorModeValue('blue.100', 'blue.900')}
-                text={'Flutter'}
+                text="Flutter"
               />
               <Feature
-                icon={<Icon as={SiNextdotjs} color={'yellow.500'} w={5} h={5} />}
+                icon={<Icon as={SiNextdotjs} color="yellow.500" w={5} h={5} />}
                 iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                text={'Next JS'}
+                text="Next JS"
               />
               <Feature
                 icon={
-                  <Icon as={SiRubyonrails} color={'red.500'} w={5} h={5} />
+                  <Icon as={SiRubyonrails} color="red.500" w={5} h={5} />
                 }
                 iconBg={useColorModeValue('red.100', 'red.900')}
-                text={'Ruby on Rails'}
+                text="Ruby on Rails"
               />
             </Stack>
           </Stack>
           <Container>
             <Image
-              rounded={'md'}
-              w={'full'}
+              rounded="md"
+              w="full"
               maxH={350}
               opacity={useColorModeValue(1, 0.8)}
-              alt={'Picture of Diego in the Snow.'}
-              src={'snow.jpeg'}
-              objectFit={'cover'}
+              alt="Picture of Diego in the Snow."
+              src="snow.jpeg"
+              objectFit="cover"
             />
           </Container>
         </SimpleGrid>
       </Flex>
-      </Flex>
-  )
+    </Flex>
+  );
 }
