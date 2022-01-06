@@ -7,15 +7,18 @@ import {
     Stat,
     StatLabel,
     StatNumber,
+    Link,
     useColorModeValue,
   } from '@chakra-ui/react';
+  import NextLink from "next/link"
+
   import { ReactNode } from 'react';
   import { BsPerson } from 'react-icons/bs';
   import { FaGamepad } from 'react-icons/fa';
   import { GoLocation } from 'react-icons/go';
   
   function StatsCard(props) {
-    const { title, stat, icon } = props;
+    const { title, stat, icon,link } = props;
     return (
       <Stat
         px={{ base: 2, md: 4 }}
@@ -29,9 +32,13 @@ import {
             <StatLabel fontWeight={'medium'} isTruncated>
               {title}
             </StatLabel>
+      <NextLink href={link} passHref>
+      <Link textUnderlineOffset={6} isExternal>
             <StatNumber fontSize={'2xl'} fontWeight={'medium'}>
               {stat}
             </StatNumber>
+          </Link>
+          </NextLink>
           </Box>
           <Box
             my={'auto'}
