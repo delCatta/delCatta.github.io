@@ -1,4 +1,4 @@
-import { VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -8,7 +8,7 @@ import Works from '../components/sections/Works'
 import About from '../components/sections/About'
 import Contact from '../components/sections/Contact'
 import Achievements from '../components/sections/Achievements'
-export default function Home() {
+export default function Home () {
   return (
     <VStack>
       <Intro></Intro>
@@ -17,5 +17,5 @@ export default function Home() {
       <Works></Works>
       <Contact></Contact>
     </VStack>
-  );
+  )
 }
