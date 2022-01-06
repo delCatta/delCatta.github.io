@@ -69,7 +69,6 @@ export default function withAction() {
               borderRadius='20%'
               objectFit='cover'
               bg={imagebg}
-              
               boxSize='50px'
               src="icon.png"
               alt='Diego Cattarinich'
