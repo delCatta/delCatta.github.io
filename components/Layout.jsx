@@ -11,8 +11,14 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Diego</title>
+        <title>Diego Cattarinich Clavel</title>
+        <meta property="og:title" content="Diego Cattarinich Clavel" />
+        <meta name="description" content="Resume and Portfolio. Currently looking for Software Development Internships." />
+        <meta property="og:description" content="Resume and Portfolio. Currently looking for Software Development Internships." />
+        <meta property="og:image" content="https://me.catta.dev/snow-small.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:url" content="https://me.catta.dev/" />
+
 
       </Head>
       <Flex direction="column" minH="100vh" bg={gray}>
