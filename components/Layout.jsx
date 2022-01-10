@@ -19,7 +19,6 @@ export default function Layout({ children }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:url" content="https://me.catta.dev/" />
 
-
       </Head>
       <Flex direction="column" minH="100vh" bg={gray}>
         <Navbar />
