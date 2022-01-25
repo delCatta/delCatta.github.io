@@ -1,6 +1,5 @@
 import React from 'react';
-import NextLink from 'next/link';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { DownloadIcon } from '@chakra-ui/icons';
 import {
   CgScrollV,
 } from 'react-icons/cg';
@@ -90,20 +89,20 @@ export default function CallToActionWithAnnotation() {
               alignSelf="center"
               position="relative"
             >
-              <NextLink href="https://resume.io/r/HEAWeYZke" passHref>
+              <a target="_blank" href="/Diego's_Resume.pdf" rel="noopener noreferrer" download>
                 <Button
                   colorScheme="teal"
                   bg="teal.400"
                   rounded="full"
                   px={6}
-                  leftIcon={<ExternalLinkIcon />}
+                  leftIcon={<DownloadIcon />}
                   _hover={{
                     bg: 'teal.500',
                   }}
                 >
                   Resume
                 </Button>
-              </NextLink>
+              </a>
               <Box>
                 <Icon
                   hidden={{ base: 1, sm: 0 }}
