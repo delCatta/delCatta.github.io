@@ -135,7 +135,7 @@ export default function CallToActionWithAnnotation() {
           <Flex AlignItems="center">
             <Center><CgScrollV /></Center>
             {' '}
-            Scrol Down
+            Scroll Down
           </Flex>
         </Text>
       </Flex>
