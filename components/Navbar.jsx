@@ -1,5 +1,5 @@
-import React from "react";
-import NextLink from "next/link";
+import React from 'react';
+import NextLink from 'next/link';
 
 import {
   Flex,
@@ -7,35 +7,12 @@ import {
   Button,
   useColorModeValue,
   useColorMode,
-} from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-
-// const Links = ['Home', 'About',"Works", 'Contact'];
-const Links = [];
-
-const NavLink = ({ children }) => {
-  let href = children.toLowerCase();
-  if (children === "Home") href = "/";
-  return (
-    <NextLink href={href}>
-      <Link
-        px={2}
-        py={1}
-        rounded="md"
-        _hover={{
-          textDecoration: "none",
-          bg: useColorModeValue("gray.200", "gray.700"),
-        }}
-      >
-        {children}
-      </Link>
-    </NextLink>
-  );
-};
+} from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 export default function withAction() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const gray = useColorModeValue("gray.100", "gray.900");
+  const gray = useColorModeValue('gray.100', 'gray.900');
 
   return (
     <Flex
@@ -80,12 +57,12 @@ export default function withAction() {
           </Link>
         </NextLink>
         <Button onClick={toggleColorMode} size="md">
-          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>
     </Flex>
 
-    /* { {isOpen ? (
+  /* { {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
