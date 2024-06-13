@@ -82,7 +82,7 @@ export default function BasicStatistics() {
         />
         <StatsCard
           title="Technovation Chile"
-          stat="Mentored Girls to build Apps."
+          stat="Mentored Girls on building Apps."
           link="https://technovation.cl/"
           icon={<BsPerson size="3em" />}
         />

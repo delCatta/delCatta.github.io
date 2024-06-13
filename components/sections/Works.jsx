@@ -18,16 +18,43 @@ import {
   SiRubyonrails,
   SiDigitalocean,
   SiDotnet,
+  SiNodedotjs,
+  SiAmazonaws,
   SiUnity,
+  SiVuedotjs
 } from 'react-icons/si';
 
 export default function GridListWithHeading() {
   const business = [
     {
+      title: 'Seez',
+      site: 'https://seez.co',
+      external: true,
+      date: '2021 - Present',
+      image: 'https://s3-eu-west-1.amazonaws.com/tpd/logos/6199e7d66d82a74f1b408395/0x0.png',
+      imagebg: 'white',
+      text: 'Full Stack Software Engineer involved on most of the projects.',
+      tools: [
+        { icon: SiAmazonaws, site: 'https://aws.amazon.com/', bgcolor: 'yellow.700'},
+        { icon: SiNodedotjs, site: 'https://nodejs.org/', bgcolor: 'green.700' },
+        { icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' },
+        { icon: SiVuedotjs, site: 'https://vuejs.org/', bgcolor: 'green.900' },
+      ],
+    },
+    {
+      title: 'Ment',
+      site: 'https://ment.cl',
+      external: false,
+      date: 'Aug 22, 2021 - Present',
+      image: useColorModeValue('/projects/mentdark.svg', '/projects/ment.svg'),
+      text: 'Appointment Booking system for independent professionals.',
+      tools: [{ icon: SiRubyonrails, site: 'https://rubyonrails.org/', bgcolor: 'red.700' }, { icon: SiDigitalocean, site: 'https://digitalocean.com/', bgcolor: 'blue.700' }],
+    },
+    {
       title: 'Peregrine',
       site: 'https://peregrinetelemetry.com',
       external: true,
-      date: '2021-Present',
+      date: '2021 - Present',
       image: '/clients/peregrine.png',
       text: 'Concurrent Freelancing. Droplets, Flutter Web Apps & Scripting.',
       tools: [{ icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' }, { icon: SiStrapi, site: 'https://strapi.io', bgcolor: 'purple.700' }, { icon: SiRubyonrails, site: 'https://rubyonrails.org/', bgcolor: 'red.700' }, { icon: SiDigitalocean, site: 'https://digitalocean.com/', bgcolor: 'blue.700' }],
@@ -38,7 +65,7 @@ export default function GridListWithHeading() {
       external: true,
       date: 'May - Aug 2021',
       image: '/clients/usercode.png',
-      text: 'Given the design, I Developed mobile version of Apptivate.',
+      text: 'Developed the mobile version of Apptivate from scratch.',
       tools: [{ icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' }],
     },
     {
@@ -47,36 +74,27 @@ export default function GridListWithHeading() {
       external: true,
       date: 'Aug - Dec 2021',
       image: '/clients/ac3e.png',
-      text: 'Internship customizing design for OptiKey.',
+      text: 'Internship customizing OptiKey\'s design specific for an ALS patient.',
       tools: [{ icon: SiDotnet, site: 'https://docs.microsoft.com/es-es/dotnet/core/whats-new/dotnet-6', bgcolor: 'orange.700' }],
     },
     {
-      title: 'Ment',
-      site: '#',
-      external: false,
-      date: 'Currently working on this...',
-      image: useColorModeValue('/projects/mentdark.svg', '/projects/ment.svg'),
-      text: 'Project under construction, so a bit private for now!',
-      tools: [{ icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' }, { icon: SiRubyonrails, site: 'https://rubyonrails.org/', bgcolor: 'red.700' }, { icon: SiDigitalocean, site: 'https://digitalocean.com/', bgcolor: 'blue.700' }],
-    },
-    {
       title: 'Clarinich App',
-      site: 'https://play.google.com/store/apps/details?id=com.thechileankink.clarinich.com&hl=es_CL&gl=US',
+      site: '#',
       external: true,
       date: 'Jan - Nov 2020',
       image: '/projects/clarinich.png',
       fit: 'cover',
-      text: "App to request service information for clients for my dad's company.",
+      text: 'Internal business logistics App for a local company.',
       tools: [{ icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' }, { icon: SiStrapi, site: 'https://strapi.io', bgcolor: 'purple.700' }],
     },
     {
       title: 'Reformados',
-      site: 'https://play.google.com/store/apps/details?id=com.thechileankink.Reformados&hl=es&gl=US',
+      site: '#',
       external: true,
       date: "Chile's social outbreak. Oct 2019",
       image: '/projects/reformados.png',
       fit: 'cover',
-      text: 'Made this questionnaire App to inform about our Constitution.',
+      text: 'Questionnaire App to inform about Chile\'s old Constitution.',
       tools: [{ icon: SiUnity, site: 'https://unity.com/', bgcolor: 'yellow.700' }],
     },
   ];
@@ -85,7 +103,7 @@ export default function GridListWithHeading() {
 
       <Box px={{ base: 0, md: 16 }} maxW="7xl" mb={16}>
         <Stack spacing={4} as={Flex} textAlign="center">
-          <Heading fontSize="3xl">Clients and Personal Projects</Heading>
+          <Heading fontSize="3xl">Experience, Clients and Personal Projects</Heading>
         </Stack>
 
         <Flex mt={10}>
@@ -100,6 +118,7 @@ export default function GridListWithHeading() {
                         w="full"
                         objectFit={feature.fit || 'contain'}
                         src={feature.image}
+                        backgroundColor={feature.imagebg || 'transparent'}
                         alt={`${feature.title} Logo`}
                       />
                     </Link>

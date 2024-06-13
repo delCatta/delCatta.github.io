@@ -54,7 +54,7 @@ export default function SplitWithImage() {
             </Text>
             <Heading>Hello There!</Heading>
             <Text color={useColorModeValue('gray.600', 'gray.400')} fontSize="lg">
-              I am passionate for building maintainable solutions for different niches and industries. Some of the frameworks I use are:
+              I thrive on creating efficient and innovative solutions. Some of the frameworks I use are:
             </Text>
             <Stack
               spacing={4}
@@ -92,7 +92,7 @@ export default function SplitWithImage() {
               maxH={350}
               opacity={useColorModeValue(1, 0.8)}
               alt="Picture of Diego in the Snow."
-              src="snow.jpeg"
+              src="me.jpeg"
               objectFit="cover"
             />
           </Container>
