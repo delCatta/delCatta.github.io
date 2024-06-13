@@ -21,7 +21,7 @@ import {
   SiNodedotjs,
   SiAmazonaws,
   SiUnity,
-  SiVuedotjs
+  SiVuedotjs,
 } from 'react-icons/si';
 
 export default function GridListWithHeading() {
@@ -35,7 +35,7 @@ export default function GridListWithHeading() {
       imagebg: 'white',
       text: 'Full Stack Software Engineer involved on most of the projects.',
       tools: [
-        { icon: SiAmazonaws, site: 'https://aws.amazon.com/', bgcolor: 'yellow.700'},
+        { icon: SiAmazonaws, site: 'https://aws.amazon.com/', bgcolor: 'yellow.700' },
         { icon: SiNodedotjs, site: 'https://nodejs.org/', bgcolor: 'green.700' },
         { icon: SiFlutter, site: 'https://flutter.dev', bgcolor: 'blue.700' },
         { icon: SiVuedotjs, site: 'https://vuejs.org/', bgcolor: 'green.900' },

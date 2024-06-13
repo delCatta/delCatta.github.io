@@ -1,17 +1,21 @@
-import React from "react";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { Flex, useColorModeValue } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
-import Head from "next/head";
+import React from 'react';
+import {
+  ChakraProvider,
+  extendTheme,
+  Flex,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
 
 // 2. Add your color mode config
 const config = {
-  initialColorMode: "dark",
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 };
 
 function MyApp({ Component, pageProps }) {
-  const gray = useColorModeValue("gray.200", "gray.800");
+  const gray = useColorModeValue('gray.200', 'gray.800');
 
   return (
     <>
@@ -29,12 +33,6 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="https://me.catta.dev/me.jpeg" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:url" content="https://me.catta.dev/" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Salsa&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <ChakraProvider theme={extendTheme({ config })} bg={gray}>
         <Flex direction="column">
