@@ -1,5 +1,5 @@
-import React from 'react';
-import NextLink from 'next/link';
+import React from "react";
+import NextLink from "next/link";
 
 import {
   Flex,
@@ -7,15 +7,15 @@ import {
   Button,
   useColorModeValue,
   useColorMode,
-} from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+} from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 // const Links = ['Home', 'About',"Works", 'Contact'];
 const Links = [];
 
 const NavLink = ({ children }) => {
   let href = children.toLowerCase();
-  if (children === 'Home') href = '/';
+  if (children === "Home") href = "/";
   return (
     <NextLink href={href}>
       <Link
@@ -23,8 +23,8 @@ const NavLink = ({ children }) => {
         py={1}
         rounded="md"
         _hover={{
-          textDecoration: 'none',
-          bg: useColorModeValue('gray.200', 'gray.700'),
+          textDecoration: "none",
+          bg: useColorModeValue("gray.200", "gray.700"),
         }}
       >
         {children}
@@ -35,7 +35,7 @@ const NavLink = ({ children }) => {
 
 export default function withAction() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const gray = useColorModeValue('gray.100', 'gray.900');
+  const gray = useColorModeValue("gray.100", "gray.900");
 
   return (
     <Flex
@@ -62,7 +62,14 @@ export default function withAction() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
             /> */}
-      <Flex spacing={8} alignItems="center">
+      <Flex
+        spacing={8}
+        alignItems="center"
+        justifyContent="space-between"
+        maxW="7xl"
+        width="full"
+        mx="auto"
+      >
         <NextLink href="/">
           <Link
             // fontFamily={"Grandiflora One"}
@@ -72,20 +79,13 @@ export default function withAction() {
             me.catta.dev
           </Link>
         </NextLink>
-        <Flex as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
-          {Links.map((link) => (
-            <NavLink key={link}>{link}</NavLink>
-          ))}
-        </Flex>
-      </Flex>
-      <Flex alignItems="center">
         <Button onClick={toggleColorMode} size="md">
-          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>
     </Flex>
 
-  /* { {isOpen ? (
+    /* { {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
